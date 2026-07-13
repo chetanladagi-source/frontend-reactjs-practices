@@ -1,12 +1,21 @@
 import { createContext, useContext, useState } from "react";
+import { validateLogin } from "../services/AuthService";
 
 const AuthContext = createContext();
 
 const AuthProvider = ({ children }) => {
-  const [isAuthenticated, setIsAuthenticated] = useState(true);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
 
-  function login() {
-    setIsAuthenticated(true);
+  async function login(data) {
+    try {
+      const response = await validateLogin(data);
+      setIsAuthenticated(true);
+      return response;
+    } catch (error) {
+      throw {
+        message: error.message,
+      };
+    }
   }
 
   function logout() {

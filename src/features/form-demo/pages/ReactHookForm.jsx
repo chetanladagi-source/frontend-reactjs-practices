@@ -20,7 +20,7 @@ const ReactHookForm = () => {
 
     reset();
   };
-  
+
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <div>

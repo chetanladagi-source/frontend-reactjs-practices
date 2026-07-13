@@ -9,6 +9,11 @@ import withAuth from "../components/ProtectedAuth";
 import ProductsLayout from "../layout/ProductsLayout";
 import { productRouter } from "../features/products-list/router/router";
 import ErrorPage from "./ErrorPage";
+import RouterLayout from "../layout/RouterLayout";
+import RoutingNested from "../features/routing-demo/pages/RoutingLevel2";
+import RoutingNestedLayout from "../features/routing-demo/layout/RouterLayout";
+import { routerNestedRouter } from "../features/routing-demo/router/router";
+import formRouter from "../features/form-demo/router/router";
 
 const ProtectedHomePageLayout = withAuth(HomePageLayout);
 
@@ -25,7 +30,8 @@ const router = createBrowserRouter([
       },
       {
         path: "/routing-demo",
-        element: <RoutingDemo />,
+        element: <RouterLayout />,
+        children: [...routerNestedRouter],
       },
       {
         path: "/high-order-component-demo",
@@ -34,6 +40,7 @@ const router = createBrowserRouter([
       {
         path: "/form-demo",
         element: <FormDemo />,
+        children: [...formRouter],
       },
       {
         path: "/products-demo",

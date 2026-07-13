@@ -1,5 +1,5 @@
 const RoutingDemo = () => {
-  return <div>Welcome to Routing demo</div>;
+  return <div>Welcome to Nested Demo</div>;
 };
 
 export default RoutingDemo;

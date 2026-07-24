@@ -1,6 +1,5 @@
 import { getProducts } from "../services/productService.js";
 
-
 export async function fetchProducts() {
   const products = await getProducts();
 

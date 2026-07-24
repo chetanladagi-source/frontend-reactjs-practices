@@ -12,16 +12,21 @@ const Dashboard = () => {
         React Practices
         <ul>
           <li>
-            <Link to={'/routing-demo'}>Routing demo</Link>
+            <Link to={"/routing-demo"}>Routing demo</Link>
           </li>
           <li>
-            <Link to={'/high-order-component-demo'}>High Order Component demo</Link>
+            <Link to={"/high-order-component-demo"}>
+              High Order Component demo
+            </Link>
           </li>
           <li>
-            <Link to={'/form-demo'}>Form demo</Link>
+            <Link to={"/form-demo"}>Form demo</Link>
           </li>
           <li>
-            <Link to={'/products-demo/product-list'}>Fetch Products demo</Link>
+            <Link to={"/products-demo/product-list"}>Fetch Products demo</Link>
+          </li>
+          <li>
+            <Link to={"/infinite-scrolling"}>Infinite Scroll</Link>
           </li>
         </ul>
       </div>

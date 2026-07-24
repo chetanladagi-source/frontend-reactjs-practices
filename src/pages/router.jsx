@@ -14,6 +14,8 @@ import RoutingNested from "../features/routing-demo/pages/RoutingLevel2";
 import RoutingNestedLayout from "../features/routing-demo/layout/RouterLayout";
 import { routerNestedRouter } from "../features/routing-demo/router/router";
 import formRouter from "../features/form-demo/router/router";
+import InfiniteScrolling from "./InifiniteScroliing";
+import { infiniteScrollingRouter } from "../features/infinite-scrolling/router/router";
 
 const ProtectedHomePageLayout = withAuth(HomePageLayout);
 
@@ -46,6 +48,11 @@ const router = createBrowserRouter([
         path: "/products-demo",
         element: <ProductsLayout />,
         children: [...productRouter],
+      },
+      {
+        path: "/infinite-scrolling",
+        elelemt: <InfiniteScrolling />,
+        children: [...infiniteScrollingRouter],
       },
     ],
   },

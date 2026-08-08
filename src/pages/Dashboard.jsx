@@ -28,6 +28,9 @@ const Dashboard = () => {
           <li>
             <Link to={"/infinite-scrolling"}>Infinite Scroll</Link>
           </li>
+          <li>
+            <Link to={"/debounce-search"}>Debounce Search</Link>
+          </li>
         </ul>
       </div>
     </div>

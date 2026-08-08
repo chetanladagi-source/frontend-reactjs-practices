@@ -13,7 +13,7 @@ export function useIntersectionObserver({
   enabled = true,
   root = null,
   rootMargin = "200px",
-  threshold = 0,
+  threshold = 1,
 }: UseIntersectionObserverProps) {
   const targetRef = useRef<HTMLDivElement | null>(null);
 
@@ -23,6 +23,7 @@ export function useIntersectionObserver({
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
+          console.log("Visible");
           onIntersect();
         }
       },

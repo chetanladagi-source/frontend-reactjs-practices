@@ -16,6 +16,8 @@ import { routerNestedRouter } from "../features/routing-demo/router/router";
 import formRouter from "../features/form-demo/router/router";
 import InfiniteScrolling from "./InifiniteScroliing";
 import { infiniteScrollingRouter } from "../features/infinite-scrolling/router/router";
+import DebounceSearch from "./DebounceSearch";
+import { debounceSearchRouter } from "../features/debounce-search/routers/router";
 
 const ProtectedHomePageLayout = withAuth(HomePageLayout);
 
@@ -53,6 +55,11 @@ const router = createBrowserRouter([
         path: "/infinite-scrolling",
         elelemt: <InfiniteScrolling />,
         children: [...infiniteScrollingRouter],
+      },
+      {
+        path: "/debounce-search",
+        elelemt: <DebounceSearch />,
+        children: [...debounceSearchRouter],
       },
     ],
   },

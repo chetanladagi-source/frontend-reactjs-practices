@@ -31,6 +31,12 @@ const Dashboard = () => {
           <li>
             <Link to={"/debounce-search"}>Debounce Search</Link>
           </li>
+          <li>
+            <Link to={"/file-explorer"}>File explorer</Link>
+          </li>
+          <li>
+            <Link to={"/to-do"}>To Do</Link>
+          </li>
         </ul>
       </div>
     </div>

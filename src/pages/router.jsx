@@ -18,6 +18,10 @@ import InfiniteScrolling from "./InifiniteScroliing";
 import { infiniteScrollingRouter } from "../features/infinite-scrolling/router/router";
 import DebounceSearch from "./DebounceSearch";
 import { debounceSearchRouter } from "../features/debounce-search/routers/router";
+import { fileExplorerRouter } from "../features/folder-structure/router/router";
+import FileExplorer from "./FileExplorer";
+import ToDo from "./ToDo";
+import { toDoRouter } from "../features/to-do/router/router";
 
 const ProtectedHomePageLayout = withAuth(HomePageLayout);
 
@@ -60,6 +64,16 @@ const router = createBrowserRouter([
         path: "/debounce-search",
         elelemt: <DebounceSearch />,
         children: [...debounceSearchRouter],
+      },
+      {
+        path: "/file-explorer",
+        elelemt: <FileExplorer />,
+        children: [...fileExplorerRouter],
+      },
+      {
+        path: "/to-do",
+        elelemt: <ToDo />,
+        children: [...toDoRouter],
       },
     ],
   },
